@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="./conatct.css">
+</head>
+<body>
+    <section class="feedBack" id="feedBack"> 
+
+            
+
+        <h1 class="titleHeader" style="font-family: Arial, Helvetica, sans-serif;"> feed back  </h1>
+        <div class="container1 right-panel-active1">
+            <!-- Form student -->
+            <div class="container__form container--student">
+                <form action="#" class="form" id="form1">
+                    <h2 class="form__title" style="font-weight: 600;">Feedback students</h2>
+                    <input type="text" placeholder="Full name" class="input" required style="border-radius: 8px ;">
+                    <input type="email" placeholder="Email" class="input" required style="border-radius: 8px ;">
+                    <input type="text" placeholder="class" class="input" required style="border-radius: 8px ;">
+                    <textarea type="text" placeholder="describe your problem" class=" " required style="width: 100%; resize: none; height: 10vh; border-radius: 16px;padding: 10px;"></textarea>
+                    <input type="submit" value="Submit" class="btn1">
+                </form>
+            </div>
+    
+            <!-- Form teacher-->
+            <div class="container__form container--teacher">
+                <form action="#" class="form" id="form2">
+                    <h2 class="form__title" style="font-weight: 600;">Feedback teachers</h2>
+                    <input type="text" placeholder="Full name" class="input" required style="border-radius: 8px ;">
+                    <input type="email" placeholder="Email" class="input" required style="border-radius: 8px ;">
+                    <textarea type="text" placeholder="describe your problem" class=" " required style="width: 100%; resize: none; height: 10vh; border-radius: 8px;padding: 10px;"></textarea>
+                    <input type="submit" value="Submit" class="btn1">
+                </form>
+            </div>
+    
+            <!-- Overlay -->
+            <div class="container__overlay1">
+                <div class="overlay1">
+                    <div class="overlay__panel overlay--left1">
+                        <button class="btn1" id="teacher">I'm a teacher</button>
+                    </div>
+                    <div class="overlay__panel overlay--right1">
+                        <button class="btn1" id="student">I'm a student</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- <script src="script.js"></script> -->
+        <script>
+            const signInBtn = document.getElementById("teacher");
+            const signUpBtn = document.getElementById("student");
+            const fistForm = document.getElementById("form1");
+            const secondForm = document.getElementById("form2");
+            const container = document.querySelector(".container1");
+            
+            signInBtn.addEventListener("click", () => {
+                container.classList.remove("right-panel-active1");
+            });
+            
+            signUpBtn.addEventListener("click", () => {
+                container.classList.add("right-panel-active1");
+            });
+            
+            fistForm.addEventListener("submit", (e) => e.preventDefault());
+            secondForm.addEventListener("submit", (e) => e.preventDefault());
+
+
+            fistForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+       
+        alert("thanks your feedBack sent successfully");
+    });
+    
+    secondForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        alert("thanks your feedBack sent successfully");
+    });
+        </script>
+     </section>
+
+</body>
+</html>
